@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.contrib import messages
+from .models import Skils
 
 
 
@@ -19,4 +20,6 @@ def homeview(request):
   else:
     form = ContactForm()
 
-  return render(request, 'home/index.html', {'form':form})
+  skils = Skils.objects.all()
+
+  return render(request, 'home/index.html', {'form':form, 'skils':skils})
