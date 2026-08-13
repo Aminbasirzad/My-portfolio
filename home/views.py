@@ -2,11 +2,13 @@ from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.contrib import messages
 from .models import Skils
+from .mongo import projects
 
 
 
 
 def homeview(request):
+  projects_data = projects.find()
   if request.method == 'POST':
     form = ContactForm(request.POST)
 
@@ -22,4 +24,4 @@ def homeview(request):
 
   skils = Skils.objects.all()
 
-  return render(request, 'home/index.html', {'form':form, 'skils':skils})
+  return render(request, 'home/index.html', {'form':form, 'skils':skils, "projects":projects_data})
