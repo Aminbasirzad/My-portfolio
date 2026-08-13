@@ -14,7 +14,3 @@ project = {
     "image": "img/portfolio/img1.png",
     "github": "https://github.com/Aminbasirzad/Shop"
 }
-
-result = projects.insert_one(project)
-projects.delete_many({})
-print("Project created:", result.inserted_id)

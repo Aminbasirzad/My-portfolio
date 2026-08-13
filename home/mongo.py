@@ -7,11 +7,11 @@ db = client["portfolio"]
 projects = db["projects"]
 
 project = {
-    "title": "Django Online Store",
-    "description": "A Online store built with Django for managing projects, users, and orders",
-    "technologies": ["Python", "Django", "HTML", "CSS", "Bootstrap"],
+    "title": "BMI Calculator",
+    "description": "A BMI calculator project built with Python.",
+    "technologies": ["Python"],
     "category": "app",
-    "image": "img/portfolio/img1.png",
-    "github": "https://github.com/Aminbasirzad/Shop"
+    "image": "img/portfolio/img2.png",
+    "github": "https://github.com/Aminbasirzad/bmi_calculator"
 }
-result = projects.insert_one(project)
+
